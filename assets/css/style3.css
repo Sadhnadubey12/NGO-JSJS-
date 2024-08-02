@@ -1,0 +1,45 @@
+.wpo-testimonial-area {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wpo-testimonial-wrap .testimonial-slider .wpo-testimonial-item {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.wpo-testimonial-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.wpo-testimonial-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: for better text visibility */
+}
+
+.wpo-section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.container-fluid {
+    padding: 0;
+}
