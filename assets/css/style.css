@@ -10366,3 +10366,26 @@ input[type=checkbox]:checked:disabled + label:before {
   margin-top: 10px; /* Adjust spacing as needed */
 }
 
+.office-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* 
+.office-info-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.office-info-icon {
+  margin-bottom: 15px;
+}
+
+.office-info-text {
+  flex: 1;
+} */
