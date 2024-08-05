@@ -10156,6 +10156,8 @@ input[type=checkbox]:checked:disabled + label:before {
 =======================================*/
 .wpo-cta-area2 {
   padding: 0px 150px 120px;
+  margin-top: -50px;
+  /* border: 2px solid red; */
 }
 @media (max-width: 1700px) {
   .wpo-cta-area2 {
@@ -10352,4 +10354,15 @@ input[type=checkbox]:checked:disabled + label:before {
   object-fit: cover;
 }
 
+
+.brand-text {
+  display: block;
+  font-size: 24px; /* Adjust size as needed */
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(to right, red, orange); /* Gradient from red to orange */
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 10px; /* Adjust spacing as needed */
+}
 
