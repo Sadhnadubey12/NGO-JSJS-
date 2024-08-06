@@ -10390,16 +10390,22 @@ input[type=checkbox]:checked:disabled + label:before {
   flex: 1;
 } */
 
-.navbar-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-color: white; /* Set background color as needed */
-}
 
-.logo-img {
-    max-width: 100px; /* Adjust the size as needed */
-    height: auto;
-}
-
+    .navbar-header {
+        display: flex;
+        align-items: center;
+    }
+    .navbar-brand {
+        display: inline-block;
+        max-width: 100%;
+    }
+    .logo-img {
+        max-width: 100%;
+        height: auto;
+        max-height: 70px; /* Maximum height for larger screens */
+    }
+    @media (max-width: 768px) {
+        .logo-img {
+            max-height: 50px; /* Adjust the size for mobile view */
+        }
+    }
