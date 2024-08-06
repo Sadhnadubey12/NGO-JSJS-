@@ -10409,3 +10409,5 @@ input[type=checkbox]:checked:disabled + label:before {
             max-height: 50px; /* Adjust the size for mobile view */
         }
     }
+
+    
