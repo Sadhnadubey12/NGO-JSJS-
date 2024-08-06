@@ -10389,3 +10389,17 @@ input[type=checkbox]:checked:disabled + label:before {
 .office-info-text {
   flex: 1;
 } */
+
+.navbar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: white; /* Set background color as needed */
+}
+
+.logo-img {
+    max-width: 100px; /* Adjust the size as needed */
+    height: auto;
+}
+
