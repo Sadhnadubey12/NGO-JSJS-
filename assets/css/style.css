@@ -10410,4 +10410,24 @@ input[type=checkbox]:checked:disabled + label:before {
         }
     }
 
+
+    
+    .wpo-about-img {
+        position: relative;
+        overflow: hidden;
+    }
+    .about-img-cover {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .wpo-total-raised {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
     
