@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from wpocean.com/html/tf/charitio/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Jul 2024 11:48:24 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,27 +21,160 @@
     <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <title>JSJS Foundation</title>
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/flaticon.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.css" rel="stylesheet">
+    <link href="assets/css/slick.css" rel="stylesheet">
+    <link href="assets/css/slick-theme.css" rel="stylesheet">
+    <link href="assets/css/swiper.min.css" rel="stylesheet">
+    <link href="assets/css/owl.transitions.css" rel="stylesheet">
+    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
+    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the Yes/No switch */
+        .form-switch {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        .form-switch input[type="checkbox"] {
+            display: none;
+        }
+
+        .form-switch label {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .form-switch .switch-text {
+            font-weight: bold;
+            margin-right: 10px;
+            color: #333;
+        }
+
+        .form-switch label:before {
+            content: "No";
+            position: absolute;
+            top: 8px;
+            left: 10px;
+            color: white;
+        }
+
+        .form-switch label:after {
+            content: "Yes";
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .form-switch input[type="checkbox"]:checked + label:before {
+            opacity: 0;
+        }
+
+        .form-switch input[type="checkbox"]:checked + label:after {
+            opacity: 1;
+        }
+
+        .form-switch label span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ccc;
+            border-radius: 34px;
+            transition: background-color 0.3s;
+        }
+
+        .form-switch label span:before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 26px;
+            height: 26px;
+            background-color: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .form-switch input[type="checkbox"]:checked + label span {
+            background-color: orange;
+        }
+
+        .form-switch input[type="checkbox"]:checked + label span:before {
+            transform: translateX(26px);
+        }
+
+        /* Form styles */
+        .form-control {
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .submit-area {
+            margin-top: 20px;
+        }
+
+        .theme-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .theme-btn:hover {
+            background-color: #f58d1c;
+        }
+
+        .wpo-donate-header h2,
+        .wpo-donation-page-area h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 767px) {
+            .form-switch {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .form-switch label {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- start page-wrapper -->
     <div class="page-wrapper">
-        <!-- start preloader -->
-        <!-- <div class="preloader">
-            <div class="vertical-centered-box">
-                <div class="content">
-                    <div class="loader-circle"></div>
-                    <div class="loader-line-mask">
-                        <div class="loader-line"></div>
-                    </div>
-                    <img src="assets/images/preloader.png" alt="">
-                </div>
-            </div>
-        </div> -->
-        <!-- end preloader -->
-       <!-- start heade --> 
-       <header id="header" class="wpo-site-header">
+
+        <!-- start heade --> 
+     <header id="header" class="wpo-site-header">
         <nav class="navigation navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
                 <div class="row align-items-center">
@@ -94,7 +225,7 @@
                                     <ul class="sub-menu">
                                         
                                         <li><a href="testimonial.html">Testimonial</a></li>
-                                        <li><a href="testimonial.html">Musical  Events</a></li>
+                                        <li><a href="musical event.html">Musical  Events</a></li>
                                        
 
 
@@ -138,136 +269,98 @@
     </header>
     <!-- end of header -->
 
-        <!-- start of breadcumb-section -->
-        <div class="wpo-breadcumb-area">
-            <div class="container">
-                <div class="row">
-                    <!-- <div class="col-12">
-                        <div class="wpo-breadcumb-wrap">
-                            <h2>Contact Us</h2>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><span>contact</span></li>
-                            </ul>
-                        </div>
+    <!-- start of wpo-hero-section-1 -->
+     <!-- start of breadcumb-section -->
+     <div class="wpo-breadcumb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- <div class="wpo-breadcumb-wrap">
+                        <h2>Testimonial</h2>
+                        <ul>
+                            <li><a href="index-2.html">Home</a></li>
+                            <li><span>Testimonial</span></li>
+                        </ul>
                     </div> -->
                 </div>
             </div>
         </div>
-        <!-- end of wpo-breadcumb-section-->
-
-        <!-- start wpo-contact-pg-section -->
-        <section class="wpo-contact-pg-section section-padding">
+    </div>
+    <!-- end of wpo-breadcumb-section-->
+       
+        <!-- wpo-event-area start -->
+        <div class="wpo-donation-page-area section-padding" >
             <div class="container">
-                <div class="row">
-                    <div class="col col-lg-10 offset-lg-1">
-                        <div class="office-info">
-                            <div class="row">
-                                <div class="col col-xl-4 col-lg-6 col-md-6 col-12">
-                                    <div class="office-info-item">
-                                        <div class="office-info-icon">
-                                            <div class="icon">
-                                                <i class="fi flaticon-placeholder"></i>
+                <div class="row justify-content-center" style="margin-top: -70px; ">
+                    <div class="col-lg-8">
+                        
+                        <div id="Donations" class="tab-pane">
+                            <form action="test3.html">
+                                
+                                <!-- Personal Details Section -->
+                                <div class="wpo-donations-details">
+                                    <div class="wpo-donate-header text-center">
+                                        <h4>Make a Donation</h4>
+                                    </div>
+                                    <!-- <h2>Details</h2> -->
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Full Name *" required>
+                                        </div>
+                                        <div class="col-12 col-md-6 form-group">
+                                            <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number * +91" required>
+                                        </div>
+                                        <div class="col-12 col-md-6 form-group">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Email ID *" required>
+                                        </div>
+                                        <div class="col-12 form-group">
+                                            <label>Require 80G Tax Exp. Certificate *</label>
+                                            <div class="form-switch">
+                                                <span class="switch-text">No</span>
+                                                <input type="checkbox" class="form-check-input" id="tax_certificate" name="tax_certificate">
+                                                <label class="form-check-label" for="tax_certificate">
+                                                    <span></span>
+                                                </label>
+                                                <span class="switch-text">Yes</span>
                                             </div>
                                         </div>
-                                        <div class="office-info-text">
-                                            <h2>Address</h2>
-                                            <p>Jai Shree Jagannath Sewa Foundation
-                                                Reg. Address: Krushna Chandrapur, Badjod,
-                                                Mayurbhanj, Odisha - 757029
-                                                India
-                                                
-                                                </p>
+                                        <div class="col-12 form-group">
+                                            <input type="text" class="form-control" name="pancard" id="pancard" placeholder="PAN Card *" required>
+                                        </div>
+                                        <div class="col-12 form-group">
+                                            <textarea class="form-control" name="remark" id="remark" placeholder="Remark"></textarea>
                                         </div>
                                     </div>
-                                </div> 
-                                <div class="col col-xl-4 col-lg-6 col-md-6 col-12">
-                                    <div class="office-info-item">
-                                        <div class="office-info-icon">
-                                            <div class="icon">
-                                                <i class="fi flaticon-email"></i>
-                                            </div>
-                                        </div>
-                                        <div class="office-info-text">
-                                            <h2>Email Us</h2>
-                                            <p>Charito@gmail.com</p>
-                                            <p>helloyou@gmail.com</p>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col col-xl-4 col-lg-6 col-md-6 col-12">
-                                    <div class="office-info-item">
-                                        <div class="office-info-icon">
-                                            <div class="icon">
-                                                <i class="fi flaticon-phone-call"></i>
-                                            </div>
-                                        </div>
-                                        <div class="office-info-text">
-                                            <h2>Call Now</h2>
-                                            <p>+91 9452451710</p>
-                                            <!-- <p>+1 800 123 654 987</p> -->
-                                        </div>
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="wpo-contact-title">
-                            <h2>Have Any Question?</h2>
-                            <p>It is a long established fact that a reader will be distracted
-                                content of a page when looking.</p>
-                        </div>
-                        <div class="wpo-contact-form-area">
-                            <form method="post" class="contact-validation-active" id="contact-form-main">
-                                <div>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name*">
-                                </div>
-                                <div>
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email*">
-                                </div>
-                                <div>
-                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone*">
-                                </div>
-                                <div>
-                                    <select name="subject" class="form-control">
-                                        <option disabled="disabled" selected>Subject</option>
-                                        <option>Subject 1</option>
-                                        <option>Subject 2</option>
-                                        <option>Subject 3</option>
-                                    </select>
-                                </div>
-                                <div class="fullwidth">
-                                    <textarea class="form-control" name="note"  id="note" placeholder="Message..."></textarea>
-                                </div>
-                                <div class="submit-area">
-                                    <button type="submit" class="theme-btn">Get in Touch</button>
-                                    <div id="loader">
-                                        <i class="ti-reload"></i>
+                                    <div class="submit-area text-center" style="margin-top: -25px;">
+                                        <a href="test.html"><button type="button" class="theme-btn" onclick="history.back();">Back</button>
+                                        </a>
+                                        <a href="test3.html"><button type="submit" class="theme-btn submit-btn" style="background-color: orange; color: white;">Donate</button>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="clearfix error-handling-messages">
-                                    <div id="success">Thank you</div>
-                                    <div id="error"> Error occurred while sending email. Please try again later. </div>
-                                </div>
+                                
                             </form>
                         </div>
-                    </div>                
+                    </div>
                 </div>
-            </div> <!-- end container -->
-        </section>
-        <!-- end wpo-contact-pg-section -->
-
-        <!--  start wpo-contact-map -->
-        <section class="wpo-contact-map-section">
-            <h2 class="hidden">Contact map</h2>
-            <div class="wpo-contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224542.7542144895!2d85.59864421357542!3d21.572870220378166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a192b05b7e2c4f1%3A0x4d7b4f2739a4f865!2sKrushna+Chandrapur%2C+Badjod%2C+Mayurbhanj%2C+Odisha+757029!5e0!3m2!1sen!2sin!4v1691399697114" allowfullscreen></iframe>
             </div>
-        </section>
-        <!-- end wpo-contact-map -->
+        </div>
+        <!-- wpo-event-area end -->
 
+    </div>
+    <!-- end of page-wrapper -->
 
-     <!-- start of wpo-site-footer-section -->
-     <footer class="wpo-site-footer">
+    <!-- All JavaScript files -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins for this template -->
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="assets/js/jquery.dlmenu.js"></script>
+    <script src="assets/js/jquery-plugin-collection.js"></script>
+    <!-- Custom script for this template -->
+    <script src="assets/js/script.js"></script>
+    <!-- start of wpo-site-footer-section -->
+    <footer class="wpo-site-footer">
         <div class="wpo-upper-footer">
             <div class="container">
                 <div class="row">
@@ -375,21 +468,24 @@
         </div>
     </footer>
     <!-- end of wpo-site-footer-section -->
-    </div>
-    <!-- end of page-wrapper -->
+</div>
+<!-- end of page-wrapper -->
 
-    <!-- All JavaScript files
-    ================================================== -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- Plugins for this template -->
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/js/jquery.dlmenu.js"></script>
-    <script src="assets/js/jquery-plugin-collection.js"></script>
-    <!-- Custom script for this template -->
-    <script src="assets/js/script.js"></script>
+<!-- All JavaScript files
+================================================== -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<!-- Plugins for this template -->
+<script src="assets/js/modernizr.custom.js"></script>
+<script src="assets/js/jquery.dlmenu.js"></script>
+<script src="assets/js/jquery-plugin-collection.js"></script>
+<!-- Custom script for this template -->
+<script src="assets/js/script.js"></script>
 </body>
 
 
-<!-- Mirrored from wpocean.com/html/tf/charitio/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Jul 2024 11:48:49 GMT -->
+<!-- Mirrored from wpocean.com/html/tf/charitio/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Jul 2024 11:48:24 GMT -->
+</html>
+</body>
+
 </html>
