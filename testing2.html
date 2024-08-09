@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #3c3c7c;
+            font-weight: bold;
+        }
+
+        .donor-type {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+
+        .donor-type input[type="radio"] {
+            display: none;
+        }
+
+        .donor-type label {
+            font-size: 14px;
+            color: #3c3c7c;
+            padding: 10px 20px;
+            border: 2px solid #3c3c7c;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .donor-type input[type="radio"]:checked + label {
+            background-color: #3c3c7c;
+            color: #fff;
+        }
+
+        .info {
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .giving-options {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .giving-options button {
+            padding: 10px 20px;
+            border: 2px solid #3c3c7c;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            background-color: #fff;
+            color: #3c3c7c;
+            outline: none;
+        }
+
+        .giving-options .active {
+            background-color: #3c3c7c;
+            color: #fff;
+        }
+
+        .contribution {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contribution p {
+            color: #3c3c7c;
+            font-size: 14px;
+        }
+
+        .contribution h2 {
+            color: #fff;
+            background-color: #3c3c7c;
+            font-size: 24px;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+            outline: none;
+        }
+
+        .phone-container {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .phone-container select,
+        .phone-container input[type="tel"] {
+            flex: 1;
+            margin-right: 5px;
+        }
+
+        .phone-container input[type="tel"] {
+            flex: 3;
+        }
+
+        .tax-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            justify-content: space-between;
+        }
+
+        .tax-option label {
+            font-size: 14px;
+            color: #3c3c7c;
+            margin-right: 10px;
+        }
+
+        .tax-option .radio-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .tax-option .radio-group input[type="radio"] {
+            display: none;
+        }
+
+        .tax-option .radio-group label {
+            font-size: 14px;
+            color: #3c3c7c;
+            padding: 5px 15px;
+            border: 2px solid #3c3c7c;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .tax-option .radio-group input[type="radio"]:checked + label {
+            background-color: #3c3c7c;
+            color: #fff;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        #backBtn,
+        #donateBtn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        #backBtn {
+            background-color: #ff6600;
+            color: #fff;
+        }
+
+        #donateBtn {
+            background-color: #ff6600;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>DONATE</h2>
+        <div class="form-group">
+            <!-- <label for="donorType">Donor Type</label> -->
+            <div class="donor-type-container">
+                <label class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="donorType" id="indianDonor" value="Indian Donor" checked> Indian Donor
+                </label>
+                <label class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="donorType" id="nriDonor" value="NRI Donor"> NRI Donor
+                </label>
+                <label class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="donorType" id="foreignDonor" value="Foreign Donor"> Foreign Donor
+                </label>
+            </div>
+        </div>
+
+        <div class="donor-info" id="donorInfoText">
+            Those who hold an Indian passport and reside in India
+        </div>
+
+        <div class="giving-options">
+            <button id="giveOnce" class="active">Give Once</button>
+            <button id="giveMonthly">Give Monthly</button>
+        </div>
+
+        <div class="contribution">
+            <p>Total Contribution</p>
+            <h2>INR 2000</h2>
+        </div>
+
+        <form>
+            <input type="text" placeholder="Full Name*" required>
+            <div class="phone-container">
+                <select>
+                    <option value="91">91</option>
+                </select>
+                <input type="tel" placeholder="Phone No.*" required>
+            </div>
+            <input type="email" placeholder="Email Id*" required>
+            <div class="tax-option">
+                <label>Require 80G Tax Exp. Certificate*</label>
+                <div class="radio-group">
+                    <input type="radio" id="yes" name="tax" checked>
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="tax">
+                    <label for="no">No</label>
+                </div>
+            </div>
+            <input type="text" placeholder="PAN CARD*" required>
+            <textarea placeholder="Remarks"></textarea>
+            <div class="buttons">
+                <button type="button" id="backBtn">BACK</button>
+                <button type="submit" id="donateBtn">DONATE</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('giveOnce').addEventListener('click', function() {
+            setActiveButton(this);
+        });
+
+        document.getElementById('giveMonthly').addEventListener('click', function() {
+            setActiveButton(this);
+        });
+
+        function setActiveButton(button) {
+            document.querySelectorAll('.giving-options button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+        }
+    </script>
+</body>
+</html>

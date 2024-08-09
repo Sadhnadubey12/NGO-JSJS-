@@ -118,6 +118,34 @@
         .giving-options button:hover {
             background-color: #004bb2;
         }
+
+
+        .donor-type-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.donor-type-container .form-check-inline {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    margin-right: 5px; /* Optional: Adjusts spacing between options */
+}
+
+.donor-type-container .form-check-inline:last-child {
+    margin-right: 0; /* Removes margin from the last label */
+}
+
+@media (max-width: 576px) {
+    .donor-type-container {
+        justify-content: space-evenly;
+    }
+}
+
+
+
+
     </style>
 </head>
 <body>
@@ -172,20 +200,12 @@
                                 <li class="menu-item-has-children">
                                     <a href="#">Event</a>
                                     <ul class="sub-menu">
-                                        
                                         <li><a href="testimonial.html">Testimonial</a></li>
                                         <li><a href="musical event.html">Musical  Events</a></li>
-                                       
-
-
                                     </ul>
                                 </li>
                                 <li><a href="test.html">Donate</a></li>
                                 <li><a href="volunteer.html">Volunteer</a></li>
-
-                              
-
-
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
 
@@ -241,8 +261,8 @@
         <h2>DONATE</h2>
         <form>
             <div class="form-group">
-                <label for="donorType">Donor Type</label>
-                <div>
+                <!-- <label for="donorType">Donor Type</label> -->
+                <div class="donor-type-container">
                     <label class="form-check-inline">
                         <input class="form-check-input" type="radio" name="donorType" id="indianDonor" value="Indian Donor" checked> Indian Donor
                     </label>
@@ -253,6 +273,7 @@
                         <input class="form-check-input" type="radio" name="donorType" id="foreignDonor" value="Foreign Donor"> Foreign Donor
                     </label>
                 </div>
+                
             </div>
 
            
@@ -263,7 +284,7 @@
                     <button type="button" id="giveMonthly">Give Monthly</button>
                 </div>
                 <div class="form-group">
-                    <label><h4 style="margin-top: 20px; margin-left: 140px;" >Select Amount</h4></label>
+                    <label><h4 style="margin-top: 20px; margin-left: 90px; "  >Select Amount</h4></label>
                     <button type="button" class="amount-button" data-amount="5000">INR 5000</button>
                     <button type="button" class="amount-button" data-amount="10000">INR 10000</button>
                     <button type="button" class="amount-button" data-amount="20000">INR 20000</button>
@@ -282,23 +303,23 @@
                     <label for="currency">Select Currency</label>
                     <select class="form-control custom-select" id="currency">
                         <option value="">Please select currency</option>
-                        <option value="AUD">AUD</option>
-                        <option value="BRL">BRL</option>
-                        <option value="CAD">CAD</option>
-                        <option value="CNY">CNY</option>
-                        <option value="EUR">EUR</option>
-                        <option value="GBP">GBP</option>
                         <option value="INR">INR</option>
-                        <option value="JPY">JPY</option>
                         <option value="USD">USD</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label><h4 style="margin-top: 20px; margin-left: 140px;" >Select Amount</h4></label>
+                <div class="form-group" id="inr_amount">
+                    <label><h4>Select Amount</h4></label>
                     <button type="button" class="amount-button2" data-amount="5000">INR 5000</button>
                     <button type="button" class="amount-button2" data-amount="10000">INR 10000</button>
                     <button type="button" class="amount-button2" data-amount="20000">INR 20000</button>
                     <input type="text" class="form-control custom-amount-input2" id="customAmount2" placeholder="INR |  Any Amount">
+                </div> 
+                <div class="form-group" id="usd_amount" style="display: none;">
+                    <label><h4>Select Amount</h4></label>
+                    <button type="button" class="amount-button2" data-amount="5000">USD 5000</button>
+                    <button type="button" class="amount-button2" data-amount="10000">USD 10000</button>
+                    <button type="button" class="amount-button2" data-amount="20000">USD 20000</button>
+                    <input type="text" class="form-control custom-amount-input2" id="customAmount2_1" placeholder="INR |  Any Amount">
                 </div> 
             </div>
             <div id="donorType_div" style="display: none;">
@@ -309,26 +330,26 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="currency">Select Currency</label>
-                    <select class="form-control custom-select" id="currency_foreign">
+                    <label for="currency2">Select Currency</label>
+                    <select class="form-control custom-select" id="currency2">
                         <option value="">Please select currency</option>
-                        <option value="AUD">AUD</option>
-                        <option value="BRL">BRL</option>
-                        <option value="CAD">CAD</option>
-                        <option value="CNY">CNY</option>
-                        <option value="EUR">EUR</option>
-                        <option value="GBP">GBP</option>
                         <option value="INR">INR</option>
-                        <option value="JPY">JPY</option>
                         <option value="USD">USD</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label><h4 style="margin-top: 20px; margin-left: 140px;" >Select Amount</h4></label>
-                    <button type="button" class="amount-button3" data-amount="5000">INR 5000</button>
-                    <button type="button" class="amount-button3" data-amount="10000">INR 10000</button>
-                    <button type="button" class="amount-button3" data-amount="20000">INR 20000</button>
-                    <input type="text" class="form-control custom-amount-input3" id="customAmount3" placeholder="INR |  Any Amount">
+                <div class="form-group" id="inr_amount1">
+                    <label><h4>Select Amount</h4></label>
+                    <button type="button" class="amount-button2" data-amount="5000">INR 5000</button>
+                    <button type="button" class="amount-button2" data-amount="10000">INR 10000</button>
+                    <button type="button" class="amount-button2" data-amount="20000">INR 20000</button>
+                    <input type="text" class="form-control custom-amount-input2" id="customAmount4" placeholder="INR |  Any Amount">
+                </div> 
+                <div class="form-group" id="usd_amount1" style="display: none;">
+                    <label><h4>Select Amount</h4></label>
+                    <button type="button" class="amount-button2" data-amount="5000">USD 5000</button>
+                    <button type="button" class="amount-button2" data-amount="10000">USD 10000</button>
+                    <button type="button" class="amount-button2" data-amount="20000">USD 20000</button>
+                    <input type="text" class="form-control custom-amount-input2" id="customAmount8_1" placeholder="INR |  Any Amount">
                 </div> 
             </div>
             <!-- <button type="button" class="next-button">Next</button> -->
@@ -342,7 +363,7 @@
 
     
 
-    <
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -411,8 +432,40 @@
                 $('#customAmount').val(amount);
                 $('#customAmount2').val(amount);
                 $('#customAmount3').val(amount);
+                $("#customAmount2_1").val(amount)
+                $('#customAmount4').val(amount);
+                $('#customAmount6').val(amount);
+                $("#customAmount8_1").val(amount)
             });
         });
+
+        $(document).ready(function(){
+            $("#currency").change(function(){
+                let currencySelect_value = $("#currency").val()
+                console.log(currencySelect_value,"currencySelect_value")
+                if(currencySelect_value === 'INR'){
+                    $("#inr_amount").show()
+                    $("#usd_amount").hide()
+                }else if(currencySelect_value === 'USD'){
+                    $("#inr_amount").hide()
+                    $("#usd_amount").show()
+                }
+            })
+})
+
+$(document).ready(function(){
+            $("#currency2").change(function(){
+                let currencySelect_value = $("#currency2").val()
+                console.log(currencySelect_value,"currencySelect_value")
+                if(currencySelect_value === 'INR'){
+                    $("#inr_amount1").show()
+                    $("#usd_amount1").hide()
+                }else if(currencySelect_value === 'USD'){
+                    $("#inr_amount1").hide()
+                    $("#usd_amount1").show()
+                }
+            })
+});
     </script>
 
     <!-- start of wpo-site-footer-section -->
@@ -539,7 +592,9 @@
 <script src="assets/js/script.js"></script>
 </body>
 
+<script>
 
+</script>
 <!-- Mirrored from wpocean.com/html/tf/charitio/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Jul 2024 11:48:24 GMT -->
 </html>
 
